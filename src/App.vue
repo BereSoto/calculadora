@@ -1,18 +1,21 @@
 <template>
   <div id="app">
-    <h1>hola</h1>
-    <div class="has-background-primary">
-      <h2>prueba</h2>
-    </div>
+    <Calculador/>
   </div>
 </template>
 
 <script>
+import Calculador from './components/Calculador.vue';
 
 export default {
   name: 'App',
   components: {
+    Calculador,
 
   },
 };
 </script>
+<style lang="scss">
+@import './scss/main.scss'
+
+</style>
