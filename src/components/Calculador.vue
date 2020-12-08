@@ -36,6 +36,8 @@ export default {
   methods: {
     clear() {
       this.current = '';
+      this.lastOperador = null;
+      this.operator = null;
     },
     sign() {
       this.current = this.current.charAt(0) === '-'
@@ -78,10 +80,10 @@ export default {
     },
     result() {
       this.current = `${this.operator(
-        parseFloat(this.current),
         parseFloat(this.previous),
+        parseFloat(this.current),
       )}`;
-      this.previous = null;
+      this.previous = this.current;
     },
   },
 };
