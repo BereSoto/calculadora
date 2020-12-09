@@ -1,25 +1,25 @@
 <template>
   <div class="calculator">
     <div class="calculator__display">{{current || 0}}</div>
-    <div @click="clear" class="calculator__btn-header">C</div>
-    <div @click="sign" class="calculator__btn-header">+/-</div>
-    <div @click="percentage" class="calculator__btn-header">%</div>
-    <div @click="division" class="calculator__btn-operator">÷</div>
-    <div @click="append('7')" class="calculator__btn">7</div>
-    <div @click="append('8')" class="calculator__btn">8</div>
-    <div @click="append('9')" class="calculator__btn">9</div>
-    <div @click=" mutiplication" class="calculator__btn-operator">x</div>
-    <div @click="append('4')" class="calculator__btn">4</div>
-    <div @click="append('5')" class="calculator__btn">5</div>
-    <div @click="append('6')" class="calculator__btn">6</div>
-    <div @click="substraction" class="calculator__btn-operator">-</div>
-    <div @click="append('1')" class="calculator__btn">1</div>
-    <div @click="append('2')" class="calculator__btn">2</div>
-    <div @click="append('3')" class="calculator__btn">3</div>
-    <div @click="sum"  class="calculator__btn-operator">+</div>
-    <div @click="append('0')" class="calculator__zero calculator__btn">0</div>
-    <div @click="decimal" class="calculator__btn">.</div>
-    <div @click="result"  class="calculator__btn-operator">=</div>
+    <button @click="clear" class="calculator__btn">C</button>
+    <button @click="sign" class="calculator__btn">+/-</button>
+    <button @click="percentage" class="calculator__btn">%</button>
+    <button @click="buttonision" class="calculator__btn">÷</button>
+    <button @click="append('7')" class="calculator__btn">7</button>
+    <button @click="append('8')" class="calculator__btn">8</button>
+    <button @click="append('9')" class="calculator__btn">9</button>
+    <button @click=" mutiplication" class="calculator__btn">x</button>
+    <button @click="append('4')" class="calculator__btn">4</button>
+    <button @click="append('5')" class="calculator__btn">5</button>
+    <button @click="append('6')" class="calculator__btn">6</button>
+    <button @click="substraction" class="calculator__btn">-</button>
+    <button @click="append('1')" class="calculator__btn">1</button>
+    <button @click="append('2')" class="calculator__btn">2</button>
+    <button @click="append('3')" class="calculator__btn">3</button>
+    <button @click="sum"  class="calculator__btn">+</button>
+    <button @click="append('0')" class="calculator__zero calculator__btn">0</button>
+    <button @click="decimal" class="calculator__btn">.</button>
+    <button @click="result"  class="calculator__btn">=</button>
   </div>
 </template>
 
@@ -62,7 +62,7 @@ export default {
       this.previous = this.current;
       this.operatorClicked = true;
     },
-    division() {
+    buttonision() {
       this.operator = (a, b) => a / b;
       this.setPrevious();
     },

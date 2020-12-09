@@ -4,15 +4,17 @@
     display: grid;
     grid-template-columns:  repeat(4, 1fr);
     grid-auto-flow: minmax(50px, auto);
-    font-size: 2rem;
     text-align: center;
     color:#EAEBEB;
-    border-radius: 1em/5em;
     
 
     &__display{
         grid-column: 1 / 5;
-        background-color: #4B4C4C;
+        background: white;
+        background:linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+        padding: 10px;
+        text-align: right;
+        font-size: 2rem;
     }
 
     &__zero{
@@ -20,18 +22,21 @@
         
     }
     &__btn{
-        background-color: #787979;
-        border: 1px solid #4C4D4D;
-
-        &-operator{
-            background-color: #FF9727;
-            border: 1px solid #4C4D4D;
-            
-        }
-        &-header{
-            background-color: #5E5E5E;
-            border: 1px solid #4C4D4D;
-        }
+        background: #3A434F;
+        color: #FCFCFD;
+        padding: 10px;
+        font-size: 1.5rem;
+    }
+    &__btn:hover{
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        background: #5A656F;    
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    }
+    &__btn:active{
+        transform:scale(1);
     }
 
 }
