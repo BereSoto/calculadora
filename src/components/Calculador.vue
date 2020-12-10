@@ -2,7 +2,7 @@
   <div class="calculator">
     <div class="calculator__display">{{current || 0}}</div>
     <button id="clearBtn" @click="clear" class="calculator__btn">C</button>
-    <button @click="sign" class="calculator__btn">+/-</button>
+    <button id="signBtn" @click="sign" class="calculator__btn">+/-</button>
     <button id="percentageBtn" @click="percentage" class="calculator__btn">%</button>
     <button id="divBtn" @click="buttonision" class="calculator__btn">÷</button>
     <button id="number7Btn" @click="append('7')" class="calculator__btn">7</button>
@@ -47,6 +47,8 @@ export default {
     // metodo para obtener el porcentaje
     percentage() {
       this.current = `${parseFloat(this.current) / 100}`;
+      this.operator = (a, b) => a * b;
+      this.setPrevious();
     },
     // metodo que agrega el número al que se le da click y se guarda en current
     append(number) {
