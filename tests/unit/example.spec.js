@@ -62,4 +62,15 @@ describe('testing the calculator functionalities', () => {
     expect(wrapper.vm.$data.current).toBe('25');
     wrapper.find('#clearBtn').trigger('click');
   });
+  test('testing division functionality', () => {
+    wrapper.find('#number5Btn').trigger('click');
+    wrapper.find('#number0Btn').trigger('click');
+    wrapper.find('#divBtn').trigger('click');
+    expect(wrapper.vm.$data.previous).toBe('50');
+    expect(wrapper.vm.operator).not.toBe(null);
+    wrapper.find('#number2Btn').trigger('click');
+    wrapper.find('#resultBtn').trigger('click');
+    expect(wrapper.vm.$data.current).toBe('25');
+    wrapper.find('#clearBtn').trigger('click');
+  });
 });

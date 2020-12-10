@@ -3,7 +3,7 @@
     <div class="calculator__display">{{current || 0}}</div>
     <button id="clearBtn" @click="clear" class="calculator__btn">C</button>
     <button @click="sign" class="calculator__btn">+/-</button>
-    <button @click="percentage" class="calculator__btn">%</button>
+    <button id="percentageBtn" @click="percentage" class="calculator__btn">%</button>
     <button id="divBtn" @click="buttonision" class="calculator__btn">÷</button>
     <button id="number7Btn" @click="append('7')" class="calculator__btn">7</button>
     <button id="number8Btn" @click="append('8')" class="calculator__btn">8</button>
@@ -34,17 +34,21 @@ export default {
     };
   },
   methods: {
+    // metodo para limpiar display
     clear() {
       this.current = '';
       this.operator = null;
     },
+    // metodo para el cambio de signo negativo a positivo
     sign() {
       this.current = this.current.charAt(0) === '-'
         ? this.current.slice(1) : `-${this.current}`;
     },
+    // metodo para obtener el porcentaje
     percentage() {
       this.current = `${parseFloat(this.current) / 100}`;
     },
+    // metodo que agrega el número al que se le da click y se guarda en current
     append(number) {
       if (this.operatorClicked) {
         this.current = '';
@@ -52,6 +56,7 @@ export default {
       }
       this.current = `${this.current}${number}`;
     },
+    // metodo para añadir punto decimal
     decimal() {
       if (this.current.indexOf('.') === -1) {
         this.append('.');
@@ -61,22 +66,27 @@ export default {
       this.previous = this.current;
       this.operatorClicked = true;
     },
+    // metodo para realizar la división
     buttonision() {
       this.operator = (a, b) => a / b;
       this.setPrevious();
     },
+    // metodo para realizar la multipliocación
     mutiplication() {
       this.operator = (a, b) => a * b;
       this.setPrevious();
     },
+    // metodo para realizar la resta
     substraction() {
       this.operator = (a, b) => a - b;
       this.setPrevious();
     },
+    // metodo para realizar la suma
     sum() {
       this.operator = (a, b) => a + b;
       this.setPrevious();
     },
+    // metodo para obtener el resultado de las operaciones
     result() {
       this.current = `${this.operator(
         parseFloat(this.previous),
