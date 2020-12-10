@@ -5,12 +5,11 @@
     grid-template-columns:  repeat(4, 1fr);
     grid-auto-flow: minmax(50px, auto);
     text-align: center;
-    color:#EAEBEB;
+    color: #FCFCFD;
     
 
     &__display{
         grid-column: 1 / 5;
-        background: white;
         background:linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
         padding: 10px;
         text-align: right;
