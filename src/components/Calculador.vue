@@ -62,6 +62,7 @@ export default {
         this.append('.');
       }
     },
+    // metodo para actualizar el resultado actual como el primer operandor
     setPrevious() {
       this.previous = this.current;
       this.operatorClicked = true;

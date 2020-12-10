@@ -73,4 +73,10 @@ describe('testing the calculator functionalities', () => {
     expect(wrapper.vm.$data.current).toBe('25');
     wrapper.find('#clearBtn').trigger('click');
   });
+  test('testing the decimal point', () => {
+    wrapper.find('#number5Btn').trigger('click');
+    wrapper.find('#decimalBtn').trigger('click');
+    wrapper.find('#number0Btn').trigger('click');
+    expect(wrapper.vm.$data.current).toBe('5.0');
+  });
 });
