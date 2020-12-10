@@ -4,22 +4,22 @@
     <button id="clearBtn" @click="clear" class="calculator__btn">C</button>
     <button @click="sign" class="calculator__btn">+/-</button>
     <button @click="percentage" class="calculator__btn">%</button>
-    <button @click="buttonision" class="calculator__btn">÷</button>
-    <button id="numberBtn" @click="append('7')" class="calculator__btn">7</button>
-    <button id="numberBtn" @click="append('8')" class="calculator__btn">8</button>
-    <button id="numberBtn" @click="append('9')" class="calculator__btn">9</button>
-    <button @click=" mutiplication" class="calculator__btn">x</button>
-    <button id="numberBtn" @click="append('4')" class="calculator__btn">4</button>
-    <button id="numberBtn" @click="append('5')" class="calculator__btn">5</button>
-    <button id="numberBtn" @click="append('6')" class="calculator__btn">6</button>
-    <button @click="substraction" class="calculator__btn">-</button>
-    <button id="numberBtn" @click="append('1')" class="calculator__btn">1</button>
-    <button id="numberBtn" @click="append('2')" class="calculator__btn">2</button>
-    <button id="numberBtn" @click="append('3')" class="calculator__btn">3</button>
-    <button @click="sum"  class="calculator__btn">+</button>
-    <button id="numberBtn" @click="append('0')" class="calculator__zero calculator__btn">0</button>
-    <button @click="decimal" class="calculator__btn">.</button>
-    <button @click="result"  class="calculator__btn">=</button>
+    <button id="divBtn" @click="buttonision" class="calculator__btn">÷</button>
+    <button id="number7Btn" @click="append('7')" class="calculator__btn">7</button>
+    <button id="number8Btn" @click="append('8')" class="calculator__btn">8</button>
+    <button id="number9Btn" @click="append('9')" class="calculator__btn">9</button>
+    <button id="multiBtn" @click=" mutiplication" class="calculator__btn">x</button>
+    <button id="number4Btn" @click="append('4')" class="calculator__btn">4</button>
+    <button id="number5Btn" @click="append('5')" class="calculator__btn">5</button>
+    <button id="number6Btn" @click="append('6')" class="calculator__btn">6</button>
+    <button id='subsBtn' @click="substraction" class="calculator__btn">-</button>
+    <button id="number1Btn" @click="append('1')" class="calculator__btn">1</button>
+    <button id="number2Btn" @click="append('2')" class="calculator__btn">2</button>
+    <button id="number3Btn" @click="append('3')" class="calculator__btn">3</button>
+    <button id='sumBtn' @click="sum"  class="calculator__btn">+</button>
+    <button id="number0Btn" @click="append('0')" class="calculator__zero calculator__btn">0</button>
+    <button id="decimalBtn" @click="decimal" class="calculator__btn">.</button>
+    <button  id="resultBtn" @click="result"  class="calculator__btn">=</button>
   </div>
 </template>
 
